@@ -1,4 +1,9 @@
-C:\Users\bellmap7\Source\Repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csprojAssemblyReference.cache
-C:\Users\bellmap7\Source\Repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.Properties.Resources.resources
-C:\Users\bellmap7\Source\Repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csproj.GenerateResource.cache
-C:\Users\bellmap7\Source\Repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csproj.CoreCompileInputs.cache
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\FHIRcastAdapter.exe.config
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\FHIRcastAdapter.exe
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\FHIRcastAdapter.pdb
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csprojAssemblyReference.cache
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.Properties.Resources.resources
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csproj.GenerateResource.cache
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csproj.CoreCompileInputs.cache
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.exe
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.pdb
