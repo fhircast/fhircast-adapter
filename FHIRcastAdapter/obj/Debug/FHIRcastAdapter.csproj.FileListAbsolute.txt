@@ -7,3 +7,7 @@ C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRca
 C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csproj.CoreCompileInputs.cache
 C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.exe
 C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.pdb
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.MainForm.resources
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\websocket-sharp.clone.dll
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\websocket-sharp.clone.xml
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csproj.CopyComplete
