@@ -11,3 +11,4 @@ C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRca
 C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\websocket-sharp.clone.dll
 C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\websocket-sharp.clone.xml
 C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\obj\Debug\FHIRcastAdapter.csproj.CopyComplete
+C:\Users\bellmap7\Source\repos\fhircast-adapter\FHIRcastAdapter\bin\Debug\System.Management.Automation.dll
