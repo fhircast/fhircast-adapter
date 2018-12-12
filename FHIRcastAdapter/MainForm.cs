@@ -117,7 +117,7 @@ namespace FHIRcastAdapter
             String strPost = "hub.callback=" + hub_callback + "&hub.mode=" + hub_mode + "&hub.events=" + hub_events;
             strPost = strPost + "&hub.secret=" + hub_secret + "&hub.topic=" + hub_topic + "&hub.lease=" + hub_lease;
             strPost = strPost + "&hub.channel.type=" + hub_channel_type + "&hub.channel.endpoint=" + hub_channel_endpoint;
-
+            log("Posting subscription request to " + url);
             HttpWebRequest objRequest = (HttpWebRequest)WebRequest.Create(url);
             objRequest.Method = "POST";
             objRequest.ContentLength = strPost.Length;
@@ -141,6 +141,7 @@ namespace FHIRcastAdapter
             using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
             {
                 result = sr.ReadToEnd();
+                log("Subscription result: " + result);
                 sr.Close();
             }
 
@@ -148,6 +149,7 @@ namespace FHIRcastAdapter
             string webSocketURL = "ws";
             if (urlParts[0]=="https") { webSocketURL += "s"; }
             webSocketURL += "://"+urlParts[2]+"/bind/endpointUID";
+            log("Binding websocket: " + webSocketURL);
             ws = new WebSocket(webSocketURL);
             ws.Connect();
   //          if (ws.ReadyState != WebSocketState.Open)
