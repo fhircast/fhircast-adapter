@@ -17,9 +17,10 @@ namespace FHIRcastAdapter
         public MainForm()
         {
             InitializeComponent();
+            log("FHIRcast Adapter starting on host " + hostname + ", user: " + windowsUser);
             hubURL.Text = FHIRcastAdapter.Properties.Settings.Default.hubURL;
             secret.Text= FHIRcastAdapter.Properties.Settings.Default.secret;
-            string watchDirectory = currentDirectory + "\\req";
+            string watchDirectory = currentDirectory + "\\req\\";
             DirectoryInfo di = Directory.CreateDirectory(watchDirectory);
             foreach (FileInfo file in di.GetFiles()) { file.Delete(); }
             FileSystemWatcher watcher = new FileSystemWatcher();
@@ -37,6 +38,7 @@ namespace FHIRcastAdapter
 
         private void fileDropped(object source, FileSystemEventArgs e)
         {
+            log("Found file: " + e.FullPath);
             string fileContent;
             using (var streamReader = new StreamReader(e.FullPath)) {fileContent = streamReader.ReadToEnd();}
             if (e.Name.EndsWith(".json"))  { notify(hubURL.Text, fileContent); }

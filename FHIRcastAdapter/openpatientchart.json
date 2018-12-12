@@ -1,0 +1,27 @@
+{
+  "timestamp": "2018-01-08T01:37:05.14",
+  "id": "q9v3jubddqt63n1",
+  "event": {
+    "hub.topic": "https://hub.example.com/7jaa86kgdudewiaq0wtu",
+    "hub.event": "open-patient-chart",
+    "context": [
+      {
+        "key": "patient",
+        "resource": {
+          "resourceType": "Patient",
+          "id": "ewUbXT9RWEbSj5wPEdgRaBw3",
+          "identifier": [
+            {
+              "system": "urn:oid:1.2.840.114350",
+              "value": "185444"
+            },
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.27000",
+              "value": "2667"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
