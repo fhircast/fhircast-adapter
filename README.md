@@ -12,14 +12,19 @@ The same scripting mechanism is used to deliver FHIRcast events to the legacy ap
 *  Redirect an existing Internet Explorer session.
 *  Anything that can be done in PowerShell...
 
-The goal of this open source effort is to facilitate end-client adaptation to FHIRcast by providing an simple example code set. It is not expected to have this software used as is in a production environment.  The software on its own does not provide any security, for example, the 'secret' is contained in app.config unencrypted.  Furthermore, scripts could be modified to inject malicious code.  In a production environment, these scripts should be encrypted or stored only on a server and not on the filesystem.
+The goal of this open source effort is to facilitate end-client adaptation to FHIRcast by providing an simple example code set. It is not expected to have this software used as is in a production environment.  The adapter does not provide any security. For example, the 'secret' is contained in app.config unencrypted.  Furthermore, scripts could be modified to inject malicious code.  In a production environment, these scripts should be encrypted or stored only on a server and not on the client filesystem.
 
 # Usage
 The adapter is a 'system tray' application.  Clicking on the upper-right corner of the form will not shutdown the application; it will keep running and appear in the system tray.  Clicking on the icon in the system tray will bring the UI back and then the 'shutdown' button can be used to terminate the application.
 
 The directory being watched is fixed to '.\req\' under the directory where the adapter is running.  If it does not exists, it will be created on start-up.  If it exists, all files in the directory will be deleted on start-up.
 
-If a file is dropped with a ".json" extension, the content of the file will be posted to the hub 'as is' without modification.  Any other file extension will invoke a script named 'publish.ps1.txt' that must be present in the same directory as the adapter.  The content of the file dropped is accessible in a variable named 'fileContent'.  The script must do the necessary parsing and manipulation and return a valid FHIRcast JSON string.  The JSON string will be sent to the hub with webscoket. 
+If a file is dropped with a ".json" extension, the content of the file will be posted to the hub 'as is' without modification.  Any other file extension will invoke a script named 'publish.ps1.txt' that must be present in the same directory as the adapter.  The content of the file dropped is accessible in a variable named 'fileContent'.  The script must do the necessary parsing and manipulation and return a valid FHIRcast JSON string.  The JSON string will be sent to the hub with websocket. 
+
+Upon receiving a FHIRcast event from the hub, the adapter will invoke a script named 'receive.ps1.txt' and insert the JSON message in a variable called 'event'.  The script can use that data to do whatever is necessary to provide the desired integration.
+
+To start the receiving and publishing of events, the adapter must first post a subscription to the hub.  It is not necessary to specify an event from the available checkboxes as some applications only want to publish events but a subsciption must be filed.  After a successful post, the websocket will be bound to receive events.
+
 
 
 # Contribution
