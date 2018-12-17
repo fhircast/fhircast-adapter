@@ -36,7 +36,6 @@ namespace FHIRcastAdapter
 
         public bool closeExam(string canvasPageID)
         { 
-            axRadiology1.Visible = false;
             return axRadiology1.CloseCanvasPage(canvasPageID, true);
         }
 
