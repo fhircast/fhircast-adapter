@@ -39,12 +39,16 @@
             this.secret = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.events = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.unsubscribe = new System.Windows.Forms.Button();
+            this.btnSaveSettings = new System.Windows.Forms.Button();
+            this.btnDeleteSubscriptions = new System.Windows.Forms.Button();
+            this.autoSubscribe = new System.Windows.Forms.CheckBox();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.topic = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iSite = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.iSiteHostname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // hubURL
@@ -68,7 +72,7 @@
             // btnSubscribe
             // 
             this.btnSubscribe.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSubscribe.Location = new System.Drawing.Point(26, 93);
+            this.btnSubscribe.Location = new System.Drawing.Point(26, 96);
             this.btnSubscribe.Name = "btnSubscribe";
             this.btnSubscribe.Size = new System.Drawing.Size(128, 23);
             this.btnSubscribe.TabIndex = 2;
@@ -109,7 +113,7 @@
             // 
             // secret
             // 
-            this.secret.Location = new System.Drawing.Point(87, 60);
+            this.secret.Location = new System.Drawing.Point(87, 45);
             this.secret.Name = "secret";
             this.secret.Size = new System.Drawing.Size(199, 20);
             this.secret.TabIndex = 5;
@@ -119,7 +123,7 @@
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 63);
+            this.label2.Location = new System.Drawing.Point(23, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 6;
@@ -138,72 +142,110 @@
             "close-imaging-study",
             "logout-user",
             "hibernate-user"});
-            this.events.Location = new System.Drawing.Point(320, 22);
+            this.events.Location = new System.Drawing.Point(317, 22);
             this.events.Name = "events";
             this.events.Size = new System.Drawing.Size(139, 124);
             this.events.TabIndex = 7;
             // 
-            // button1
+            // unsubscribe
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.Location = new System.Drawing.Point(160, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Unsubscribe";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.unsubscribe.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.unsubscribe.Location = new System.Drawing.Point(160, 97);
+            this.unsubscribe.Name = "unsubscribe";
+            this.unsubscribe.Size = new System.Drawing.Size(126, 23);
+            this.unsubscribe.TabIndex = 8;
+            this.unsubscribe.Text = "Unsubscribe";
+            this.unsubscribe.UseVisualStyleBackColor = false;
+            this.unsubscribe.Click += new System.EventHandler(this.btnUnSubscribe_Click);
             // 
-            // button2
+            // btnSaveSettings
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button2.Location = new System.Drawing.Point(486, 61);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Get Context";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSaveSettings.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnSaveSettings.Location = new System.Drawing.Point(486, 53);
+            this.btnSaveSettings.Name = "btnSaveSettings";
+            this.btnSaveSettings.Size = new System.Drawing.Size(156, 23);
+            this.btnSaveSettings.TabIndex = 9;
+            this.btnSaveSettings.Text = "Save Settings";
+            this.btnSaveSettings.UseVisualStyleBackColor = false;
+            this.btnSaveSettings.Click += new System.EventHandler(this.btnSaveSettings_Click);
             // 
-            // button3
+            // btnDeleteSubscriptions
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button3.Location = new System.Drawing.Point(160, 125);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Select All Events";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDeleteSubscriptions.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDeleteSubscriptions.Location = new System.Drawing.Point(26, 125);
+            this.btnDeleteSubscriptions.Name = "btnDeleteSubscriptions";
+            this.btnDeleteSubscriptions.Size = new System.Drawing.Size(128, 23);
+            this.btnDeleteSubscriptions.TabIndex = 11;
+            this.btnDeleteSubscriptions.Text = "Delete all subscriptions";
+            this.btnDeleteSubscriptions.UseVisualStyleBackColor = false;
+            this.btnDeleteSubscriptions.Click += new System.EventHandler(this.btnDeleteSubscriptions_Click);
             // 
-            // button4
+            // autoSubscribe
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button4.Location = new System.Drawing.Point(26, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Delete all subscriptions";
-            this.button4.UseVisualStyleBackColor = false;
+            this.autoSubscribe.AutoSize = true;
+            this.autoSubscribe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoSubscribe.Location = new System.Drawing.Point(162, 133);
+            this.autoSubscribe.Name = "autoSubscribe";
+            this.autoSubscribe.Size = new System.Drawing.Size(149, 17);
+            this.autoSubscribe.TabIndex = 12;
+            this.autoSubscribe.Text = "Auto-subscribe on start-up";
+            this.autoSubscribe.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // btnHelp
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(486, 129);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(149, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Auto-subscribe on start-up";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.btnHelp.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnHelp.Location = new System.Drawing.Point(486, 81);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(156, 23);
+            this.btnHelp.TabIndex = 13;
+            this.btnHelp.Text = "Online Help";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
-            // button5
+            // topic
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button5.Location = new System.Drawing.Point(486, 93);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 23);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Online Help";
-            this.button5.UseVisualStyleBackColor = false;
+            this.topic.Location = new System.Drawing.Point(87, 67);
+            this.topic.Name = "topic";
+            this.topic.Size = new System.Drawing.Size(199, 20);
+            this.topic.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Topic:";
+            // 
+            // iSite
+            // 
+            this.iSite.AutoSize = true;
+            this.iSite.Location = new System.Drawing.Point(486, 107);
+            this.iSite.Name = "iSite";
+            this.iSite.Size = new System.Drawing.Size(81, 17);
+            this.iSite.TabIndex = 16;
+            this.iSite.Text = "iSite control";
+            this.iSite.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(26, 433);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(397, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "FHIRcast is a registered trademark of HL7.  iSite is a registered trademark of Ph" +
+    "ilips.";
+            // 
+            // iSiteHostname
+            // 
+            this.iSiteHostname.Location = new System.Drawing.Point(486, 127);
+            this.iSiteHostname.Name = "iSiteHostname";
+            this.iSiteHostname.Size = new System.Drawing.Size(156, 20);
+            this.iSiteHostname.TabIndex = 18;
             // 
             // MainForm
             // 
@@ -211,12 +253,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(670, 450);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.iSiteHostname);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.iSite);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.topic);
+            this.Controls.Add(this.btnHelp);
+            this.Controls.Add(this.autoSubscribe);
+            this.Controls.Add(this.btnDeleteSubscriptions);
+            this.Controls.Add(this.btnSaveSettings);
+            this.Controls.Add(this.unsubscribe);
             this.Controls.Add(this.events);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.secret);
@@ -244,12 +290,16 @@
         private System.Windows.Forms.TextBox secret;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox events;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button unsubscribe;
+        private System.Windows.Forms.Button btnSaveSettings;
+        private System.Windows.Forms.Button btnDeleteSubscriptions;
+        private System.Windows.Forms.CheckBox autoSubscribe;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.TextBox topic;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox iSite;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox iSiteHostname;
     }
 }
 

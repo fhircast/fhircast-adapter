@@ -2,11 +2,23 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FHIRcastAdapter.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="hubURL" Type="System.String" Scope="Application">
+    <Setting Name="hubURL" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://localhost:3000/api/hub/</Value>
     </Setting>
-    <Setting Name="secret" Type="System.String" Scope="Application">
+    <Setting Name="secret" Type="System.String" Scope="User">
       <Value Profile="(Default)">secret</Value>
+    </Setting>
+    <Setting Name="events" Type="System.String" Scope="User">
+      <Value Profile="(Default)">open-patient-chart</Value>
+    </Setting>
+    <Setting Name="autoSubscribe" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="iSite" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="iSiteHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">63.145.247.35</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,0 +1,18 @@
+<eventClass>
+  <eventName>CLOSEEXAM</eventName>
+  <username>martin</username>
+  <patientName>FRANCISCO, ANN L</patientName>
+  <patientID>01357Z</patientID>
+  <patientBirthDate>25/12/1934</patientBirthDate>
+  <issuerOfPatientID>DEFAULT</issuerOfPatientID>
+  <otherPatientID></otherPatientID>
+  <patientGender>F</patientGender>
+  <accessionNumber>857C004Z</accessionNumber>
+  <studyUID>1.2.840.113696.1.1.10578.2018010714026</studyUID>
+  <studyDescription>CR-ANKLE LEFT 1 OR 2 VIEWS</studyDescription>
+  <reasonForStudy>Exam4</reasonForStudy>
+  <studyDate>2/3/2018 3:47PM</studyDate>
+  <modalitiesInStudy>CR</modalitiesInStudy>
+  <institutionName></institutionName>
+  <requestingPhysician>Welby, Marcust</requestingPhysician>
+</eventClass>

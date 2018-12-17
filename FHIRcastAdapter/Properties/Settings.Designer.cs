@@ -23,21 +23,75 @@ namespace FHIRcastAdapter.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:3000/api/hub/")]
         public string hubURL {
             get {
                 return ((string)(this["hubURL"]));
             }
+            set {
+                this["hubURL"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("secret")]
         public string secret {
             get {
                 return ((string)(this["secret"]));
+            }
+            set {
+                this["secret"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("open-patient-chart")]
+        public string events {
+            get {
+                return ((string)(this["events"]));
+            }
+            set {
+                this["events"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool autoSubscribe {
+            get {
+                return ((bool)(this["autoSubscribe"]));
+            }
+            set {
+                this["autoSubscribe"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool iSite {
+            get {
+                return ((bool)(this["iSite"]));
+            }
+            set {
+                this["iSite"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("63.145.247.35")]
+        public string iSiteHost {
+            get {
+                return ((string)(this["iSiteHost"]));
+            }
+            set {
+                this["iSiteHost"] = value;
             }
         }
     }
