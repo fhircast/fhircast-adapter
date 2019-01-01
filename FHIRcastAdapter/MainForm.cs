@@ -72,7 +72,6 @@ namespace FHIRcastAdapter
                 iSiteControl.init(iSiteHostname.Text);
                 iSiteControl.Show();
                 iSiteControl.Visible = true;
-                iSiteControl.login("siemens44", "44siemens","ISITE");
             }
         }
 
